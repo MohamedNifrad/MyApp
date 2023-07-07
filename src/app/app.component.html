@@ -1,0 +1,85 @@
+<div class="card">
+  <div class="card-body">
+    <div class="container mb-5 mt-3">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="text-center">
+            <p class="pt-0">Calculate Your Water Bill</p>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-xl-7">
+            <ul class="list-unstyled">
+              <li class="text-muted">To: <span style="color:#5d9fc5 ;">Godigamuwa</span></li>
+              <li class="text-muted">Medagama, Bibila</li>
+              <li class="text-muted">UVA, Sri Lanka</li>
+              <li class="text-muted"><i class="fas fa-phone"></i> 769726138</li>
+            </ul>
+          </div>
+          <div class="col-xl-5">
+            <div class="form-outline">
+              <input type="number" id="typeNumber" [(ngModel)]="inputValue" class="form-control" />
+              <label class="form-label" for="typeNumber">Unit input</label>
+            </div>
+            <button type="button" class="btn btn-primary text-capitalize mr-2" style="background-color:#d8d9da; margin-right: 10px" (click)="clear()">Clear</button>
+            <button type="button" class="btn btn-primary text-capitalize" style="background-color:#60bdf3;" (click)="calculateBill()">Calculate</button>
+
+          </div>
+        </div>
+
+        <!--        <div class="row my-2 mx-1 justify-content-center">-->
+        <!--          <table class="table table-striped table-borderless">-->
+        <!--            <thead style="background-color:#84B0CA ;" class="text-white">-->
+        <!--            <tr>-->
+        <!--              <th scope="col">#</th>-->
+        <!--              <th scope="col">Description</th>-->
+        <!--              <th scope="col">Unit Price</th>-->
+        <!--              <th scope="col">Amount</th>-->
+        <!--            </tr>-->
+        <!--            </thead>-->
+        <!--            <tbody>-->
+        <!--            <tr>-->
+        <!--              <th scope="row">1</th>-->
+        <!--              <td>Pro Package</td>-->
+        <!--              <td>$200</td>-->
+        <!--              <td>$800</td>-->
+        <!--            </tr>-->
+        <!--            <tr>-->
+        <!--              <th scope="row">2</th>-->
+        <!--              <td>Web hosting</td>-->
+        <!--              <td>$10</td>-->
+        <!--              <td>$10</td>-->
+        <!--            </tr>-->
+        <!--            <tr>-->
+        <!--              <th scope="row">3</th>-->
+        <!--              <td>Consulting</td>-->
+        <!--              <td>$300</td>-->
+        <!--              <td>$300</td>-->
+        <!--            </tr>-->
+        <!--            </tbody>-->
+
+        <!--          </table>-->
+        <!--        </div>-->
+
+        <br>
+        <div class="row">
+          <div class="col-xl-8">
+            <!--            <p class="ms-3">Add additional notes and payment information</p>-->
+
+          </div>
+          <div class="col-xl-3">
+            <ul class="list-unstyled">
+              <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>{{'Rs. ' +this.subTotal}}</li>
+              <li class="text-muted ms-3 mt-2"><span class="text-black me-4">F-Amount</span>{{'Rs. ' +this.fixedAmount}}</li>
+            </ul>
+            <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
+              style="font-size: 25px;">{{'Rs. ' +this.total}}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
